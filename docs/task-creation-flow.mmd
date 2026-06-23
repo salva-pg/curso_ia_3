@@ -1,0 +1,30 @@
+flowchart TD
+  A([Usuario entra en la app]) --> B[TaskPage: listado de tareas]
+  B --> C{Hay tareas?}
+  C -->|No| D[EmptyState: mensaje y CTA Crear tarea]
+  C -->|Si| E[TaskList: tareas ordenadas por ICE]
+  D --> F[Accion: Crear tarea]
+  E --> F
+  F --> G[TaskForm: modo creacion]
+  G --> H[Usuario introduce titulo y descripcion]
+  H --> I{Quiere sugerencia IA?}
+  I -->|No| J[Usuario introduce Impacto, Confianza y Esfuerzo]
+  I -->|Si| K[Boton Calcular con IA]
+  K --> L[LoadingState: Calculando ICE]
+  L --> M{Respuesta valida?}
+  M -->|No| N[ErrorMessage: fallback manual]
+  N --> J
+  M -->|Si| O[AiSuggestionPanel: mostrar ICE sugerido]
+  O --> P[Revision: Impacto, Confianza, Esfuerzo, motivo]
+  P --> Q{Usuario acepta sugerencia?}
+  Q -->|Editar valores| R[Edicion manual opcional]
+  R --> S[Recalcular ICE]
+  Q -->|Aceptar| S
+  J --> S
+  S --> T[Preview: puntuacion ICE final]
+  T --> U{Formulario valido?}
+  U -->|No| V[Mostrar validaciones de campo]
+  V --> G
+  U -->|Si| W[Confirmar tarea]
+  W --> X[TaskSummary: tarea confirmada]
+  X --> Y[TaskList actualizado y ordenado por ICE]

@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1080" viewBox="0 0 1440 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Pantallas principales del Gestor de Tareas ICE</title>
+  <desc id="desc">Wireframe SVG con layout principal, listado de tareas, formulario, sugerencia de IA y resumen confirmado basado en Material UI.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .bg{fill:#f6f8fb}
+      .surface{fill:#fff;stroke:#d7dde7;stroke-width:1}
+      .appbar{fill:#1976d2}
+      .primary{fill:#1976d2}
+      .primaryText{fill:#fff;font-family:Arial,sans-serif;font-size:15px;font-weight:700}
+      .text{fill:#17212f;font-family:Arial,sans-serif}
+      .muted{fill:#667085;font-family:Arial,sans-serif}
+      .title{font-size:22px;font-weight:700}
+      .h2{font-size:18px;font-weight:700}
+      .body{font-size:14px}
+      .small{font-size:12px}
+      .chip{fill:#e3f2fd;stroke:#90caf9;stroke-width:1}
+      .success{fill:#e8f5e9;stroke:#a5d6a7;stroke-width:1}
+      .warning{fill:#fff8e1;stroke:#ffe082;stroke-width:1}
+      .danger{fill:#ffebee;stroke:#ef9a9a;stroke-width:1}
+      .input{fill:#fff;stroke:#9aa4b2;stroke-width:1}
+      .divider{stroke:#e4e7ec;stroke-width:1}
+      .outlineButton{fill:#fff;stroke:#1976d2;stroke-width:1.4}
+      .icon{fill:#667085}
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1440" height="1080"/>
+  <text class="text title" x="48" y="48">Gestor de Tareas ICE - estructura visual</text>
+  <text class="muted body" x="48" y="72">Referencia UX para React + Material UI. Aplicacion de una sola pantalla con estados principales.</text>
+
+  <!-- Screen 1 -->
+  <g transform="translate(48 108)">
+    <rect class="surface" filter="url(#shadow)" x="0" y="0" width="410" height="390" rx="8"/>
+    <rect class="appbar" x="0" y="0" width="410" height="56" rx="8"/>
+    <rect class="appbar" x="0" y="44" width="410" height="12"/>
+    <text class="primaryText" x="24" y="35">TaskPage</text>
+    <circle cx="360" cy="28" r="14" fill="#fff" opacity="0.25"/>
+    <text class="text h2" x="24" y="92">Listado de tareas</text>
+    <text class="muted body" x="24" y="116">Tareas ordenadas por puntuacion ICE</text>
+    <rect class="primary" x="270" y="80" width="116" height="36" rx="4"/>
+    <text class="primaryText small" x="292" y="102">+ Crear</text>
+
+    <rect class="surface" x="24" y="144" width="362" height="72" rx="6"/>
+    <text class="text body" x="44" y="171">Mejorar formulario de contacto</text>
+    <text class="muted small" x="44" y="193">Pendiente · ICE 14.0</text>
+    <rect class="chip" x="295" y="162" width="58" height="26" rx="13"/>
+    <text class="text small" x="313" y="180">Alta</text>
+
+    <rect class="surface" x="24" y="232" width="362" height="72" rx="6"/>
+    <text class="text body" x="44" y="259">Revisar textos vacios</text>
+    <text class="muted small" x="44" y="281">Pendiente · ICE 8.2</text>
+    <rect class="warning" x="295" y="250" width="58" height="26" rx="13"/>
+    <text class="text small" x="310" y="268">Media</text>
+
+    <rect class="surface" x="24" y="320" width="362" height="46" rx="6"/>
+    <text class="muted body" x="44" y="349">Estado vacio: crea tu primera tarea</text>
+  </g>
+
+  <!-- Screen 2 -->
+  <g transform="translate(515 108)">
+    <rect class="surface" filter="url(#shadow)" x="0" y="0" width="410" height="390" rx="8"/>
+    <text class="text h2" x="24" y="42">TaskForm - crear tarea</text>
+    <text class="muted body" x="24" y="66">Formulario Material UI con campos controlados</text>
+
+    <rect class="input" x="24" y="96" width="362" height="48" rx="4"/>
+    <text class="muted small" x="36" y="116">Titulo</text>
+    <text class="text body" x="36" y="136">Mejorar formulario de contacto</text>
+
+    <rect class="input" x="24" y="164" width="362" height="88" rx="4"/>
+    <text class="muted small" x="36" y="184">Descripcion</text>
+    <text class="text body" x="36" y="207">Reducir campos obligatorios y</text>
+    <text class="text body" x="36" y="228">mejorar mensajes de error.</text>
+
+    <rect class="outlineButton" x="24" y="276" width="160" height="40" rx="4"/>
+    <text class="text body" x="50" y="301">Calcular con IA</text>
+    <rect class="primary" x="248" y="276" width="138" height="40" rx="4" opacity="0.45"/>
+    <text class="primaryText small" x="278" y="301">Guardar</text>
+
+    <line class="divider" x1="24" y1="338" x2="386" y2="338"/>
+    <text class="muted small" x="24" y="364">Accion primaria habilitada cuando el formulario es valido.</text>
+  </g>
+
+  <!-- Screen 3 -->
+  <g transform="translate(982 108)">
+    <rect class="surface" filter="url(#shadow)" x="0" y="0" width="410" height="390" rx="8"/>
+    <text class="text h2" x="24" y="42">AiSuggestionPanel</text>
+    <text class="muted body" x="24" y="66">Revision de sugerencia ICE antes de confirmar</text>
+
+    <rect class="chip" x="24" y="96" width="362" height="48" rx="6"/>
+    <text class="text body" x="44" y="126">Sugerencia generada por IA</text>
+
+    <rect class="input" x="24" y="168" width="104" height="64" rx="4"/>
+    <text class="muted small" x="43" y="190">Impacto</text>
+    <text class="text title" x="62" y="220">8</text>
+    <rect class="input" x="153" y="168" width="104" height="64" rx="4"/>
+    <text class="muted small" x="174" y="190">Confianza</text>
+    <text class="text title" x="191" y="220">7</text>
+    <rect class="input" x="282" y="168" width="104" height="64" rx="4"/>
+    <text class="muted small" x="306" y="190">Esfuerzo</text>
+    <text class="text title" x="320" y="220">4</text>
+
+    <rect class="success" x="24" y="252" width="168" height="52" rx="6"/>
+    <text class="muted small" x="44" y="273">ICE final</text>
+    <text class="text h2" x="44" y="295">14.0</text>
+    <rect class="surface" x="208" y="252" width="178" height="52" rx="6"/>
+    <text class="muted small" x="226" y="274">Motivo IA</text>
+    <text class="text small" x="226" y="292">Valor alto, esfuerzo medio</text>
+
+    <rect class="outlineButton" x="24" y="328" width="144" height="40" rx="4"/>
+    <text class="text body" x="49" y="353">Editar valores</text>
+    <rect class="primary" x="216" y="328" width="170" height="40" rx="4"/>
+    <text class="primaryText small" x="250" y="353">Aceptar sugerencia</text>
+  </g>
+
+  <!-- Screen 4 -->
+  <g transform="translate(248 565)">
+    <rect class="surface" filter="url(#shadow)" x="0" y="0" width="410" height="390" rx="8"/>
+    <text class="text h2" x="24" y="42">TaskForm - edicion manual</text>
+    <text class="muted body" x="24" y="66">Valores ICE editables con validacion 1-10</text>
+
+    <rect class="input" x="24" y="100" width="104" height="64" rx="4"/>
+    <text class="muted small" x="43" y="122">Impacto</text>
+    <text class="text title" x="62" y="152">9</text>
+    <rect class="input" x="153" y="100" width="104" height="64" rx="4"/>
+    <text class="muted small" x="174" y="122">Confianza</text>
+    <text class="text title" x="191" y="152">7</text>
+    <rect class="input" x="282" y="100" width="104" height="64" rx="4"/>
+    <text class="muted small" x="306" y="122">Esfuerzo</text>
+    <text class="text title" x="320" y="152">5</text>
+
+    <rect class="surface" x="24" y="196" width="362" height="72" rx="6"/>
+    <text class="muted small" x="44" y="222">Preview de prioridad</text>
+    <text class="text h2" x="44" y="250">ICE = 12.6</text>
+    <rect class="warning" x="278" y="218" width="74" height="28" rx="14"/>
+    <text class="text small" x="298" y="237">Media</text>
+
+    <rect class="outlineButton" x="24" y="304" width="120" height="40" rx="4"/>
+    <text class="text body" x="55" y="329">Cancelar</text>
+    <rect class="primary" x="238" y="304" width="148" height="40" rx="4"/>
+    <text class="primaryText small" x="274" y="329">Confirmar</text>
+  </g>
+
+  <!-- Screen 5 -->
+  <g transform="translate(782 565)">
+    <rect class="surface" filter="url(#shadow)" x="0" y="0" width="410" height="390" rx="8"/>
+    <text class="text h2" x="24" y="42">ConfirmedTaskSummary</text>
+    <text class="muted body" x="24" y="66">Resumen tras confirmar la tarea</text>
+
+    <circle cx="205" cy="124" r="34" fill="#2e7d32"/>
+    <path d="M190 124 L201 135 L223 108" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text class="text h2" x="105" y="188">Tarea creada correctamente</text>
+
+    <rect class="surface" x="34" y="220" width="342" height="86" rx="6"/>
+    <text class="text body" x="54" y="248">Mejorar formulario de contacto</text>
+    <text class="muted small" x="54" y="272">Pendiente · Impacto 8 · Confianza 7 · Esfuerzo 4</text>
+    <rect class="success" x="266" y="236" width="74" height="36" rx="18"/>
+    <text class="text body" x="287" y="259">14.0</text>
+
+    <rect class="outlineButton" x="34" y="330" width="142" height="40" rx="4"/>
+    <text class="text body" x="60" y="355">Crear otra</text>
+    <rect class="primary" x="218" y="330" width="158" height="40" rx="4"/>
+    <text class="primaryText small" x="250" y="355">Ver listado</text>
+  </g>
+
+  <!-- Connectors -->
+  <path d="M458 303 C488 303 486 303 515 303" fill="none" stroke="#98a2b3" stroke-width="2"/>
+  <path d="M925 303 C954 303 952 303 982 303" fill="none" stroke="#98a2b3" stroke-width="2"/>
+  <path d="M1187 498 C1187 535 453 530 453 565" fill="none" stroke="#98a2b3" stroke-width="2"/>
+  <path d="M658 760 C708 760 732 760 782 760" fill="none" stroke="#98a2b3" stroke-width="2"/>
+
+  <text class="muted small" x="48" y="1036">Componentes visuales sugeridos: AppBar, Container, Paper, Card, TextField, Button, Chip, Alert, CircularProgress y Snackbar si hiciera falta.</text>
+</svg>
