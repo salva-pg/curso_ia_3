@@ -1,0 +1,15 @@
+interface:
+  display_name: "GitHub Issue Status"
+  short_description: "Move GitHub issues through doing and done"
+  default_prompt: "Use $github-issue-status issue_number=<number> change_type=<doing|done>."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "github"
+      description: "GitHub MCP server for reading issues and updating project status"
+      transport: "streamable_http"
+      url: "https://api.githubcopilot.com/mcp/"
+
+policy:
+  allow_implicit_invocation: true
