@@ -1,0 +1,4 @@
+interface:
+  display_name: "Complete Next Task"
+  short_description: "Orchestrate one project task end to end"
+  default_prompt: "Use $complete-next-task to implement the next project task from issue workflow through commit and done status."

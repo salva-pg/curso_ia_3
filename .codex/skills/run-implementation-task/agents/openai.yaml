@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run Implementation Task"
+  short_description: "Execute the next documented repo task"
+  default_prompt: "Use $run-implementation-task to detect and execute the next task from docs/implementation-tasks.md."
