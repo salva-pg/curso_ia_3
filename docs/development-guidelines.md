@@ -154,3 +154,21 @@ src/
 - [ ] Revisar el peso y valor de cada dependencia.
 - [ ] Mantener dependencias alineadas con el curso.
 - [ ] Documentar cualquier excepcion aprobada.
+
+### Herramientas de calidad de codigo
+
+| Herramienta | Uso |
+| --- | --- |
+| `eslint` | Analisis estatico de codigo. |
+| `typescript-eslint` | Reglas recomendadas para TypeScript. |
+| `eslint-plugin-react` | Reglas recomendadas para React. |
+| `eslint-plugin-react-hooks` | Reglas oficiales de Hooks. |
+| `eslint-plugin-import` | Validacion de importaciones. |
+| `eslint-config-prettier` | Evitar conflictos entre ESLint y Prettier. |
+| `prettier` | Formato consistente de codigo. |
+
+- [ ] Ejecutar `npm run lint` para revisar calidad de codigo.
+- [ ] Ejecutar `npm run lint:fix` solo para correcciones automaticas seguras.
+- [ ] Ejecutar `npm run format` para aplicar formato.
+- [ ] Ejecutar `npm run format:check` para validar formato sin modificar archivos.
+- [ ] Mantener Prettier separado de ESLint; no usar Prettier como regla de ESLint.
